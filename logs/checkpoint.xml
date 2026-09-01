@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-08-14T14:22:22.194343+05:30 by Eclipse SUMO sumo 1.27.1
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/anubhav/development/sumoslammers/relevance_v2x/sim/./../net/grid.net.xml"/>
+        <route-files value="/home/anubhav/development/sumoslammers/relevance_v2x/sim/./../net/grid.rou.xml"/>
+    </input>
+
+    <time>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <collision.action value="none"/>
+    </processing>
+
+    <report>
+        <no-warnings value="true"/>
+    </report>
+
+    <traci_server>
+        <remote-port value="8813"/>
+    </traci_server>
+
+    <random_number>
+        <seed value="42"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<snapshot type="micro" version="1.27.1" time="200.00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/state_file.xsd">
+    <route id="auto_A0A1_A0B0" state="1" edges="A0A1 A1A0 A0B0"/>
+    <route id="auto_A0A1_A1A0" state="1" edges="A0A1 A1A0"/>
+    <route id="auto_A0A1_A1A2" state="1" edges="A0A1 A1A2"/>
+    <route id="auto_A0A1_A1B1" state="1" edges="A0A1 A1B1"/>
+    <route id="auto_A0A1_A2A1" state="1" edges="A0A1 A1B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_A0A1_A2B2" state="1" edges="A0A1 A1A2 A2B2"/>
+    <route id="auto_A0A1_B0A0" state="1" edges="A0A1 A1B1 B1B0 B0A0"/>
+    <route id="auto_A0A1_B0B1" state="1" edges="A0A1 A1B1 B1B0 B0B1"/>
+    <route id="auto_A0A1_B0C0" state="1" edges="A0A1 A1B1 B1B0 B0C0"/>
+    <route id="auto_A0A1_B2A2" state="1" edges="A0A1 A1B1 B1B2 B2A2"/>
+    <route id="auto_A0A1_B2B1" state="1" edges="A0A1 A1A2 A2B2 B2B1"/>
+    <route id="auto_A0A1_B2C2" state="1" edges="A0A1 A1A2 A2B2 B2C2"/>
+    <route id="auto_A0A1_C0B0" state="1" edges="A0A1 A1B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_A0A1_C0C1" state="1" edges="A0A1 A1B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_A0A1_C1B1" state="1" edges="A0A1 A1B1 B1C1 C1B1"/>
+    <route id="auto_A0A1_C1C0" state="1" edges="A0A1 A1B1 B1C1 C1C0"/>
+    <route id="auto_A0A1_C1C2" state="1" edges="A0A1 A1B1 B1C1 C1C2"/>
+    <route id="auto_A0A1_C2B2" state="1" edges="A0A1 A1B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_A0A1_C2C1" state="1" edges="A0A1 A1A2 A2B2 B2C2 C2C1"/>
+    <route id="auto_A0B0_A0A1" state="1" edges="A0B0 B0A0 A0A1"/>
+    <route id="auto_A0B0_A1A0" state="1" edges="A0B0 B0B1 B1A1 A1A0"/>
+    <route id="auto_A0B0_A1A2" state="1" edges="A0B0 B0B1 B1A1 A1A2"/>
+    <route id="auto_A0B0_A1B1" state="1" edges="A0B0 B0A0 A0A1 A1B1"/>
+    <route id="auto_A0B0_A2A1" state="1" edges="A0B0 B0B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_A0B0_A2B2" state="1" edges="A0B0 B0B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_A0B0_B0A0" state="1" edges="A0B0 B0A0"/>
+    <route id="auto_A0B0_B0B1" state="1" edges="A0B0 B0B1"/>
+    <route id="auto_A0B0_B0C0" state="1" edges="A0B0 B0C0"/>
+    <route id="auto_A0B0_B2A2" state="1" edges="A0B0 B0B1 B1B2 B2A2"/>
+    <route id="auto_A0B0_B2B1" state="1" edges="A0B0 B0B1 B1B2 B2B1"/>
+    <route id="auto_A0B0_B2C2" state="1" edges="A0B0 B0B1 B1B2 B2C2"/>
+    <route id="auto_A0B0_C0B0" state="1" edges="A0B0 B0B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_A0B0_C0C1" state="1" edges="A0B0 B0C0 C0C1"/>
+    <route id="auto_A0B0_C1B1" state="1" edges="A0B0 B0C0 C0C1 C1B1"/>
+    <route id="auto_A0B0_C1C0" state="1" edges="A0B0 B0B1 B1C1 C1C0"/>
+    <route id="auto_A0B0_C1C2" state="1" edges="A0B0 B0C0 C0C1 C1C2"/>
+    <route id="auto_A0B0_C2B2" state="1" edges="A0B0 B0C0 C0C1 C1C2 C2B2"/>
+    <route id="auto_A0B0_C2C1" state="1" edges="A0B0 B0B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_A1A0_A0A1" state="1" edges="A1A0 A0B0 B0A0 A0A1"/>
+    <route id="auto_A1A0_A0B0" state="1" edges="A1A0 A0B0"/>
+    <route id="auto_A1A0_A1A2" state="1" edges="A1A0 A0B0 B0B1 B1A1 A1A2"/>
+    <route id="auto_A1A0_A1B1" state="1" edges="A1A0 A0B0 B0A0 A0A1 A1B1"/>
+    <route id="auto_A1A0_A2A1" state="1" edges="A1A0 A0B0 B0B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_A1A0_A2B2" state="1" edges="A1A0 A0B0 B0B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_A1A0_B0A0" state="1" edges="A1A0 A0B0 B0A0"/>
+    <route id="auto_A1A0_B0B1" state="1" edges="A1A0 A0B0 B0B1"/>
+    <route id="auto_A1A0_B0C0" state="1" edges="A1A0 A0B0 B0C0"/>
+    <route id="auto_A1A0_B2A2" state="1" edges="A1A0 A0B0 B0B1 B1B2 B2A2"/>
+    <route id="auto_A1A0_B2B1" state="1" edges="A1A0 A0B0 B0B1 B1B2 B2B1"/>
+    <route id="auto_A1A0_B2C2" state="1" edges="A1A0 A0B0 B0B1 B1B2 B2C2"/>
+    <route id="auto_A1A0_C0B0" state="1" edges="A1A0 A0B0 B0B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_A1A0_C0C1" state="1" edges="A1A0 A0B0 B0C0 C0C1"/>
+    <route id="auto_A1A0_C1B1" state="1" edges="A1A0 A0B0 B0C0 C0C1 C1B1"/>
+    <route id="auto_A1A0_C1C0" state="1" edges="A1A0 A0B0 B0B1 B1C1 C1C0"/>
+    <route id="auto_A1A0_C1C2" state="1" edges="A1A0 A0B0 B0C0 C0C1 C1C2"/>
+    <route id="auto_A1A0_C2B2" state="1" edges="A1A0 A0B0 B0C0 C0C1 C1C2 C2B2"/>
+    <route id="auto_A1A0_C2C1" state="1" edges="A1A0 A0B0 B0B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_A1A2_A0A1" state="1" edges="A1A2 A2B2 B2B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_A1A2_A0B0" state="1" edges="A1A2 A2B2 B2B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_A1A2_A1A0" state="1" edges="A1A2 A2B2 B2B1 B1A1 A1A0"/>
+    <route id="auto_A1A2_A1B1" state="1" edges="A1A2 A2B2 B2B1 B1A1 A1B1"/>
+    <route id="auto_A1A2_A2A1" state="1" edges="A1A2 A2B2 B2A2 A2A1"/>
+    <route id="auto_A1A2_A2B2" state="1" edges="A1A2 A2B2"/>
+    <route id="auto_A1A2_B0A0" state="1" edges="A1A2 A2B2 B2B1 B1B0 B0A0"/>
+    <route id="auto_A1A2_B0B1" state="1" edges="A1A2 A2B2 B2B1 B1B0 B0B1"/>
+    <route id="auto_A1A2_B0C0" state="1" edges="A1A2 A2B2 B2B1 B1B0 B0C0"/>
+    <route id="auto_A1A2_B2A2" state="1" edges="A1A2 A2B2 B2A2"/>
+    <route id="auto_A1A2_B2B1" state="1" edges="A1A2 A2B2 B2B1"/>
+    <route id="auto_A1A2_B2C2" state="1" edges="A1A2 A2B2 B2C2"/>
+    <route id="auto_A1A2_C0B0" state="1" edges="A1A2 A2B2 B2C2 C2C1 C1C0 C0B0"/>
+    <route id="auto_A1A2_C0C1" state="1" edges="A1A2 A2B2 B2B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_A1A2_C1B1" state="1" edges="A1A2 A2B2 B2C2 C2C1 C1B1"/>
+    <route id="auto_A1A2_C1C0" state="1" edges="A1A2 A2B2 B2C2 C2C1 C1C0"/>
+    <route id="auto_A1A2_C1C2" state="1" edges="A1A2 A2B2 B2B1 B1C1 C1C2"/>
+    <route id="auto_A1A2_C2B2" state="1" edges="A1A2 A2B2 B2B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_A1A2_C2C1" state="1" edges="A1A2 A2B2 B2C2 C2C1"/>
+    <route id="auto_A1B1_A0A1" state="1" edges="A1B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_A1B1_A0B0" state="1" edges="A1B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_A1B1_A1A0" state="1" edges="A1B1 B1A1 A1A0"/>
+    <route id="auto_A1B1_A1A2" state="1" edges="A1B1 B1A1 A1A2"/>
+    <route id="auto_A1B1_A2A1" state="1" edges="A1B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_A1B1_A2B2" state="1" edges="A1B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_A1B1_B0A0" state="1" edges="A1B1 B1B0 B0A0"/>
+    <route id="auto_A1B1_B0B1" state="1" edges="A1B1 B1B0 B0B1"/>
+    <route id="auto_A1B1_B0C0" state="1" edges="A1B1 B1B0 B0C0"/>
+    <route id="auto_A1B1_B2A2" state="1" edges="A1B1 B1B2 B2A2"/>
+    <route id="auto_A1B1_B2B1" state="1" edges="A1B1 B1B2 B2B1"/>
+    <route id="auto_A1B1_B2C2" state="1" edges="A1B1 B1B2 B2C2"/>
+    <route id="auto_A1B1_C0B0" state="1" edges="A1B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_A1B1_C0C1" state="1" edges="A1B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_A1B1_C1B1" state="1" edges="A1B1 B1C1 C1B1"/>
+    <route id="auto_A1B1_C1C0" state="1" edges="A1B1 B1C1 C1C0"/>
+    <route id="auto_A1B1_C1C2" state="1" edges="A1B1 B1C1 C1C2"/>
+    <route id="auto_A1B1_C2B2" state="1" edges="A1B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_A1B1_C2C1" state="1" edges="A1B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_A2A1_A0A1" state="1" edges="A2A1 A1B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_A2A1_A0B0" state="1" edges="A2A1 A1A0 A0B0"/>
+    <route id="auto_A2A1_A1A0" state="1" edges="A2A1 A1A0"/>
+    <route id="auto_A2A1_A1A2" state="1" edges="A2A1 A1A2"/>
+    <route id="auto_A2A1_A1B1" state="1" edges="A2A1 A1B1"/>
+    <route id="auto_A2A1_A2B2" state="1" edges="A2A1 A1A2 A2B2"/>
+    <route id="auto_A2A1_B0A0" state="1" edges="A2A1 A1B1 B1B0 B0A0"/>
+    <route id="auto_A2A1_B0B1" state="1" edges="A2A1 A1A0 A0B0 B0B1"/>
+    <route id="auto_A2A1_B0C0" state="1" edges="A2A1 A1A0 A0B0 B0C0"/>
+    <route id="auto_A2A1_B2A2" state="1" edges="A2A1 A1B1 B1B2 B2A2"/>
+    <route id="auto_A2A1_B2B1" state="1" edges="A2A1 A1A2 A2B2 B2B1"/>
+    <route id="auto_A2A1_B2C2" state="1" edges="A2A1 A1B1 B1B2 B2C2"/>
+    <route id="auto_A2A1_C0B0" state="1" edges="A2A1 A1B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_A2A1_C0C1" state="1" edges="A2A1 A1A0 A0B0 B0C0 C0C1"/>
+    <route id="auto_A2A1_C1B1" state="1" edges="A2A1 A1B1 B1C1 C1B1"/>
+    <route id="auto_A2A1_C1C0" state="1" edges="A2A1 A1B1 B1C1 C1C0"/>
+    <route id="auto_A2A1_C1C2" state="1" edges="A2A1 A1B1 B1C1 C1C2"/>
+    <route id="auto_A2A1_C2B2" state="1" edges="A2A1 A1B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_A2A1_C2C1" state="1" edges="A2A1 A1B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_A2B2_A0A1" state="1" edges="A2B2 B2B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_A2B2_A0B0" state="1" edges="A2B2 B2B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_A2B2_A1A0" state="1" edges="A2B2 B2B1 B1A1 A1A0"/>
+    <route id="auto_A2B2_A1A2" state="1" edges="A2B2 B2B1 B1A1 A1A2"/>
+    <route id="auto_A2B2_A1B1" state="1" edges="A2B2 B2B1 B1A1 A1B1"/>
+    <route id="auto_A2B2_A2A1" state="1" edges="A2B2 B2A2 A2A1"/>
+    <route id="auto_A2B2_B0A0" state="1" edges="A2B2 B2B1 B1B0 B0A0"/>
+    <route id="auto_A2B2_B0B1" state="1" edges="A2B2 B2B1 B1B0 B0B1"/>
+    <route id="auto_A2B2_B0C0" state="1" edges="A2B2 B2B1 B1B0 B0C0"/>
+    <route id="auto_A2B2_B2A2" state="1" edges="A2B2 B2A2"/>
+    <route id="auto_A2B2_B2B1" state="1" edges="A2B2 B2B1"/>
+    <route id="auto_A2B2_B2C2" state="1" edges="A2B2 B2C2"/>
+    <route id="auto_A2B2_C0B0" state="1" edges="A2B2 B2C2 C2C1 C1C0 C0B0"/>
+    <route id="auto_A2B2_C0C1" state="1" edges="A2B2 B2B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_A2B2_C1B1" state="1" edges="A2B2 B2C2 C2C1 C1B1"/>
+    <route id="auto_A2B2_C1C0" state="1" edges="A2B2 B2C2 C2C1 C1C0"/>
+    <route id="auto_A2B2_C1C2" state="1" edges="A2B2 B2B1 B1C1 C1C2"/>
+    <route id="auto_A2B2_C2B2" state="1" edges="A2B2 B2B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_A2B2_C2C1" state="1" edges="A2B2 B2C2 C2C1"/>
+    <route id="auto_B0A0_A0A1" state="1" edges="B0A0 A0A1"/>
+    <route id="auto_B0A0_A0B0" state="1" edges="B0A0 A0A1 A1A0 A0B0"/>
+    <route id="auto_B0A0_A1A0" state="1" edges="B0A0 A0A1 A1A0"/>
+    <route id="auto_B0A0_A1A2" state="1" edges="B0A0 A0A1 A1A2"/>
+    <route id="auto_B0A0_A1B1" state="1" edges="B0A0 A0A1 A1B1"/>
+    <route id="auto_B0A0_A2A1" state="1" edges="B0A0 A0A1 A1B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_B0A0_A2B2" state="1" edges="B0A0 A0A1 A1A2 A2B2"/>
+    <route id="auto_B0A0_B0B1" state="1" edges="B0A0 A0A1 A1B1 B1B0 B0B1"/>
+    <route id="auto_B0A0_B0C0" state="1" edges="B0A0 A0A1 A1B1 B1B0 B0C0"/>
+    <route id="auto_B0A0_B2A2" state="1" edges="B0A0 A0A1 A1B1 B1B2 B2A2"/>
+    <route id="auto_B0A0_B2B1" state="1" edges="B0A0 A0A1 A1A2 A2B2 B2B1"/>
+    <route id="auto_B0A0_B2C2" state="1" edges="B0A0 A0A1 A1A2 A2B2 B2C2"/>
+    <route id="auto_B0A0_C0B0" state="1" edges="B0A0 A0A1 A1B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_B0A0_C0C1" state="1" edges="B0A0 A0A1 A1B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_B0A0_C1B1" state="1" edges="B0A0 A0A1 A1B1 B1C1 C1B1"/>
+    <route id="auto_B0A0_C1C0" state="1" edges="B0A0 A0A1 A1B1 B1C1 C1C0"/>
+    <route id="auto_B0A0_C1C2" state="1" edges="B0A0 A0A1 A1B1 B1C1 C1C2"/>
+    <route id="auto_B0A0_C2B2" state="1" edges="B0A0 A0A1 A1B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_B0A0_C2C1" state="1" edges="B0A0 A0A1 A1A2 A2B2 B2C2 C2C1"/>
+    <route id="auto_B0B1_A0A1" state="1" edges="B0B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_B0B1_A0B0" state="1" edges="B0B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_B0B1_A1A0" state="1" edges="B0B1 B1A1 A1A0"/>
+    <route id="auto_B0B1_A1A2" state="1" edges="B0B1 B1A1 A1A2"/>
+    <route id="auto_B0B1_A1B1" state="1" edges="B0B1 B1A1 A1B1"/>
+    <route id="auto_B0B1_A2A1" state="1" edges="B0B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_B0B1_A2B2" state="1" edges="B0B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_B0B1_B0A0" state="1" edges="B0B1 B1B0 B0A0"/>
+    <route id="auto_B0B1_B0C0" state="1" edges="B0B1 B1B0 B0C0"/>
+    <route id="auto_B0B1_B2A2" state="1" edges="B0B1 B1B2 B2A2"/>
+    <route id="auto_B0B1_B2B1" state="1" edges="B0B1 B1B2 B2B1"/>
+    <route id="auto_B0B1_B2C2" state="1" edges="B0B1 B1B2 B2C2"/>
+    <route id="auto_B0B1_C0B0" state="1" edges="B0B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_B0B1_C0C1" state="1" edges="B0B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_B0B1_C1B1" state="1" edges="B0B1 B1C1 C1B1"/>
+    <route id="auto_B0B1_C1C0" state="1" edges="B0B1 B1C1 C1C0"/>
+    <route id="auto_B0B1_C1C2" state="1" edges="B0B1 B1C1 C1C2"/>
+    <route id="auto_B0B1_C2B2" state="1" edges="B0B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_B0B1_C2C1" state="1" edges="B0B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_B0C0_A0A1" state="1" edges="B0C0 C0C1 C1B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_B0C0_A0B0" state="1" edges="B0C0 C0C1 C1B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_B0C0_A1A0" state="1" edges="B0C0 C0C1 C1B1 B1A1 A1A0"/>
+    <route id="auto_B0C0_A1A2" state="1" edges="B0C0 C0C1 C1B1 B1A1 A1A2"/>
+    <route id="auto_B0C0_A1B1" state="1" edges="B0C0 C0C1 C1B1 B1A1 A1B1"/>
+    <route id="auto_B0C0_A2A1" state="1" edges="B0C0 C0C1 C1C2 C2B2 B2A2 A2A1"/>
+    <route id="auto_B0C0_A2B2" state="1" edges="B0C0 C0C1 C1B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_B0C0_B0A0" state="1" edges="B0C0 C0C1 C1B1 B1B0 B0A0"/>
+    <route id="auto_B0C0_B0B1" state="1" edges="B0C0 C0C1 C1C0 C0B0 B0B1"/>
+    <route id="auto_B0C0_B2A2" state="1" edges="B0C0 C0C1 C1C2 C2B2 B2A2"/>
+    <route id="auto_B0C0_B2B1" state="1" edges="B0C0 C0C1 C1C2 C2B2 B2B1"/>
+    <route id="auto_B0C0_B2C2" state="1" edges="B0C0 C0C1 C1B1 B1B2 B2C2"/>
+    <route id="auto_B0C0_C0B0" state="1" edges="B0C0 C0C1 C1C0 C0B0"/>
+    <route id="auto_B0C0_C0C1" state="1" edges="B0C0 C0C1"/>
+    <route id="auto_B0C0_C1B1" state="1" edges="B0C0 C0C1 C1B1"/>
+    <route id="auto_B0C0_C1C0" state="1" edges="B0C0 C0C1 C1C0"/>
+    <route id="auto_B0C0_C1C2" state="1" edges="B0C0 C0C1 C1C2"/>
+    <route id="auto_B0C0_C2B2" state="1" edges="B0C0 C0C1 C1C2 C2B2"/>
+    <route id="auto_B0C0_C2C1" state="1" edges="B0C0 C0C1 C1B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_B2A2_A0A1" state="1" edges="B2A2 A2A1 A1B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_B2A2_A0B0" state="1" edges="B2A2 A2A1 A1A0 A0B0"/>
+    <route id="auto_B2A2_A1A0" state="1" edges="B2A2 A2A1 A1A0"/>
+    <route id="auto_B2A2_A1A2" state="1" edges="B2A2 A2A1 A1A2"/>
+    <route id="auto_B2A2_A1B1" state="1" edges="B2A2 A2A1 A1B1"/>
+    <route id="auto_B2A2_A2A1" state="1" edges="B2A2 A2A1"/>
+    <route id="auto_B2A2_A2B2" state="1" edges="B2A2 A2A1 A1A2 A2B2"/>
+    <route id="auto_B2A2_B0A0" state="1" edges="B2A2 A2A1 A1B1 B1B0 B0A0"/>
+    <route id="auto_B2A2_B0B1" state="1" edges="B2A2 A2A1 A1A0 A0B0 B0B1"/>
+    <route id="auto_B2A2_B0C0" state="1" edges="B2A2 A2A1 A1A0 A0B0 B0C0"/>
+    <route id="auto_B2A2_B2B1" state="1" edges="B2A2 A2A1 A1A2 A2B2 B2B1"/>
+    <route id="auto_B2A2_B2C2" state="1" edges="B2A2 A2A1 A1B1 B1B2 B2C2"/>
+    <route id="auto_B2A2_C0B0" state="1" edges="B2A2 A2A1 A1B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_B2A2_C0C1" state="1" edges="B2A2 A2A1 A1A0 A0B0 B0C0 C0C1"/>
+    <route id="auto_B2A2_C1B1" state="1" edges="B2A2 A2A1 A1B1 B1C1 C1B1"/>
+    <route id="auto_B2A2_C1C0" state="1" edges="B2A2 A2A1 A1B1 B1C1 C1C0"/>
+    <route id="auto_B2A2_C1C2" state="1" edges="B2A2 A2A1 A1B1 B1C1 C1C2"/>
+    <route id="auto_B2A2_C2B2" state="1" edges="B2A2 A2A1 A1B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_B2A2_C2C1" state="1" edges="B2A2 A2A1 A1B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_B2B1_A0A1" state="1" edges="B2B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_B2B1_A0B0" state="1" edges="B2B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_B2B1_A1A0" state="1" edges="B2B1 B1A1 A1A0"/>
+    <route id="auto_B2B1_A1A2" state="1" edges="B2B1 B1A1 A1A2"/>
+    <route id="auto_B2B1_A1B1" state="1" edges="B2B1 B1A1 A1B1"/>
+    <route id="auto_B2B1_A2A1" state="1" edges="B2B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_B2B1_A2B2" state="1" edges="B2B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_B2B1_B0A0" state="1" edges="B2B1 B1B0 B0A0"/>
+    <route id="auto_B2B1_B0B1" state="1" edges="B2B1 B1B0 B0B1"/>
+    <route id="auto_B2B1_B0C0" state="1" edges="B2B1 B1B0 B0C0"/>
+    <route id="auto_B2B1_B2A2" state="1" edges="B2B1 B1B2 B2A2"/>
+    <route id="auto_B2B1_B2C2" state="1" edges="B2B1 B1B2 B2C2"/>
+    <route id="auto_B2B1_C0B0" state="1" edges="B2B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_B2B1_C0C1" state="1" edges="B2B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_B2B1_C1B1" state="1" edges="B2B1 B1C1 C1B1"/>
+    <route id="auto_B2B1_C1C0" state="1" edges="B2B1 B1C1 C1C0"/>
+    <route id="auto_B2B1_C1C2" state="1" edges="B2B1 B1C1 C1C2"/>
+    <route id="auto_B2B1_C2B2" state="1" edges="B2B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_B2B1_C2C1" state="1" edges="B2B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_B2C2_A0A1" state="1" edges="B2C2 C2C1 C1C0 C0B0 B0A0 A0A1"/>
+    <route id="auto_B2C2_A0B0" state="1" edges="B2C2 C2C1 C1B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_B2C2_A1A0" state="1" edges="B2C2 C2C1 C1B1 B1A1 A1A0"/>
+    <route id="auto_B2C2_A1A2" state="1" edges="B2C2 C2C1 C1B1 B1A1 A1A2"/>
+    <route id="auto_B2C2_A1B1" state="1" edges="B2C2 C2C1 C1B1 B1A1 A1B1"/>
+    <route id="auto_B2C2_A2A1" state="1" edges="B2C2 C2C1 C1B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_B2C2_A2B2" state="1" edges="B2C2 C2C1 C1B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_B2C2_B0A0" state="1" edges="B2C2 C2C1 C1C0 C0B0 B0A0"/>
+    <route id="auto_B2C2_B0B1" state="1" edges="B2C2 C2C1 C1C0 C0B0 B0B1"/>
+    <route id="auto_B2C2_B0C0" state="1" edges="B2C2 C2C1 C1B1 B1B0 B0C0"/>
+    <route id="auto_B2C2_B2A2" state="1" edges="B2C2 C2C1 C1B1 B1B2 B2A2"/>
+    <route id="auto_B2C2_B2B1" state="1" edges="B2C2 C2C1 C1B1 B1B2 B2B1"/>
+    <route id="auto_B2C2_C0B0" state="1" edges="B2C2 C2C1 C1C0 C0B0"/>
+    <route id="auto_B2C2_C0C1" state="1" edges="B2C2 C2C1 C1B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_B2C2_C1B1" state="1" edges="B2C2 C2C1 C1B1"/>
+    <route id="auto_B2C2_C1C0" state="1" edges="B2C2 C2C1 C1C0"/>
+    <route id="auto_B2C2_C1C2" state="1" edges="B2C2 C2C1 C1C2"/>
+    <route id="auto_B2C2_C2B2" state="1" edges="B2C2 C2C1 C1C2 C2B2"/>
+    <route id="auto_B2C2_C2C1" state="1" edges="B2C2 C2C1"/>
+    <route id="auto_C0B0_A0A1" state="1" edges="C0B0 B0A0 A0A1"/>
+    <route id="auto_C0B0_A0B0" state="1" edges="C0B0 B0B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_C0B0_A1A0" state="1" edges="C0B0 B0B1 B1A1 A1A0"/>
+    <route id="auto_C0B0_A1A2" state="1" edges="C0B0 B0A0 A0A1 A1A2"/>
+    <route id="auto_C0B0_A1B1" state="1" edges="C0B0 B0A0 A0A1 A1B1"/>
+    <route id="auto_C0B0_A2A1" state="1" edges="C0B0 B0B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_C0B0_A2B2" state="1" edges="C0B0 B0A0 A0A1 A1A2 A2B2"/>
+    <route id="auto_C0B0_B0A0" state="1" edges="C0B0 B0A0"/>
+    <route id="auto_C0B0_B0B1" state="1" edges="C0B0 B0B1"/>
+    <route id="auto_C0B0_B0C0" state="1" edges="C0B0 B0C0"/>
+    <route id="auto_C0B0_B2A2" state="1" edges="C0B0 B0B1 B1B2 B2A2"/>
+    <route id="auto_C0B0_B2B1" state="1" edges="C0B0 B0B1 B1B2 B2B1"/>
+    <route id="auto_C0B0_B2C2" state="1" edges="C0B0 B0B1 B1B2 B2C2"/>
+    <route id="auto_C0B0_C0C1" state="1" edges="C0B0 B0C0 C0C1"/>
+    <route id="auto_C0B0_C1B1" state="1" edges="C0B0 B0B1 B1C1 C1B1"/>
+    <route id="auto_C0B0_C1C0" state="1" edges="C0B0 B0B1 B1C1 C1C0"/>
+    <route id="auto_C0B0_C1C2" state="1" edges="C0B0 B0B1 B1C1 C1C2"/>
+    <route id="auto_C0B0_C2B2" state="1" edges="C0B0 B0B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_C0B0_C2C1" state="1" edges="C0B0 B0B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_C0C1_A0A1" state="1" edges="C0C1 C1B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_C0C1_A0B0" state="1" edges="C0C1 C1B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_C0C1_A1A0" state="1" edges="C0C1 C1B1 B1A1 A1A0"/>
+    <route id="auto_C0C1_A1A2" state="1" edges="C0C1 C1B1 B1A1 A1A2"/>
+    <route id="auto_C0C1_A1B1" state="1" edges="C0C1 C1B1 B1A1 A1B1"/>
+    <route id="auto_C0C1_A2A1" state="1" edges="C0C1 C1C2 C2B2 B2A2 A2A1"/>
+    <route id="auto_C0C1_A2B2" state="1" edges="C0C1 C1B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_C0C1_B0A0" state="1" edges="C0C1 C1B1 B1B0 B0A0"/>
+    <route id="auto_C0C1_B0B1" state="1" edges="C0C1 C1C0 C0B0 B0B1"/>
+    <route id="auto_C0C1_B0C0" state="1" edges="C0C1 C1B1 B1B0 B0C0"/>
+    <route id="auto_C0C1_B2A2" state="1" edges="C0C1 C1C2 C2B2 B2A2"/>
+    <route id="auto_C0C1_B2B1" state="1" edges="C0C1 C1C2 C2B2 B2B1"/>
+    <route id="auto_C0C1_B2C2" state="1" edges="C0C1 C1B1 B1B2 B2C2"/>
+    <route id="auto_C0C1_C0B0" state="1" edges="C0C1 C1C0 C0B0"/>
+    <route id="auto_C0C1_C1B1" state="1" edges="C0C1 C1B1"/>
+    <route id="auto_C0C1_C1C0" state="1" edges="C0C1 C1C0"/>
+    <route id="auto_C0C1_C1C2" state="1" edges="C0C1 C1C2"/>
+    <route id="auto_C0C1_C2B2" state="1" edges="C0C1 C1C2 C2B2"/>
+    <route id="auto_C0C1_C2C1" state="1" edges="C0C1 C1B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_C1B1_A0A1" state="1" edges="C1B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_C1B1_A0B0" state="1" edges="C1B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_C1B1_A1A0" state="1" edges="C1B1 B1A1 A1A0"/>
+    <route id="auto_C1B1_A1A2" state="1" edges="C1B1 B1A1 A1A2"/>
+    <route id="auto_C1B1_A1B1" state="1" edges="C1B1 B1A1 A1B1"/>
+    <route id="auto_C1B1_A2A1" state="1" edges="C1B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_C1B1_A2B2" state="1" edges="C1B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_C1B1_B0A0" state="1" edges="C1B1 B1B0 B0A0"/>
+    <route id="auto_C1B1_B0B1" state="1" edges="C1B1 B1B0 B0B1"/>
+    <route id="auto_C1B1_B0C0" state="1" edges="C1B1 B1B0 B0C0"/>
+    <route id="auto_C1B1_B2A2" state="1" edges="C1B1 B1B2 B2A2"/>
+    <route id="auto_C1B1_B2B1" state="1" edges="C1B1 B1B2 B2B1"/>
+    <route id="auto_C1B1_B2C2" state="1" edges="C1B1 B1B2 B2C2"/>
+    <route id="auto_C1B1_C0B0" state="1" edges="C1B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_C1B1_C0C1" state="1" edges="C1B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_C1B1_C1C0" state="1" edges="C1B1 B1C1 C1C0"/>
+    <route id="auto_C1B1_C1C2" state="1" edges="C1B1 B1C1 C1C2"/>
+    <route id="auto_C1B1_C2B2" state="1" edges="C1B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_C1B1_C2C1" state="1" edges="C1B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_C1C0_A0A1" state="1" edges="C1C0 C0B0 B0A0 A0A1"/>
+    <route id="auto_C1C0_A0B0" state="1" edges="C1C0 C0B0 B0B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_C1C0_A1A0" state="1" edges="C1C0 C0B0 B0B1 B1A1 A1A0"/>
+    <route id="auto_C1C0_A1A2" state="1" edges="C1C0 C0B0 B0A0 A0A1 A1A2"/>
+    <route id="auto_C1C0_A1B1" state="1" edges="C1C0 C0B0 B0A0 A0A1 A1B1"/>
+    <route id="auto_C1C0_A2A1" state="1" edges="C1C0 C0B0 B0B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_C1C0_A2B2" state="1" edges="C1C0 C0B0 B0A0 A0A1 A1A2 A2B2"/>
+    <route id="auto_C1C0_B0A0" state="1" edges="C1C0 C0B0 B0A0"/>
+    <route id="auto_C1C0_B0B1" state="1" edges="C1C0 C0B0 B0B1"/>
+    <route id="auto_C1C0_B0C0" state="1" edges="C1C0 C0B0 B0C0"/>
+    <route id="auto_C1C0_B2A2" state="1" edges="C1C0 C0B0 B0B1 B1B2 B2A2"/>
+    <route id="auto_C1C0_B2B1" state="1" edges="C1C0 C0B0 B0B1 B1B2 B2B1"/>
+    <route id="auto_C1C0_B2C2" state="1" edges="C1C0 C0B0 B0B1 B1B2 B2C2"/>
+    <route id="auto_C1C0_C0B0" state="1" edges="C1C0 C0B0"/>
+    <route id="auto_C1C0_C0C1" state="1" edges="C1C0 C0B0 B0C0 C0C1"/>
+    <route id="auto_C1C0_C1B1" state="1" edges="C1C0 C0B0 B0B1 B1C1 C1B1"/>
+    <route id="auto_C1C0_C1C2" state="1" edges="C1C0 C0B0 B0B1 B1C1 C1C2"/>
+    <route id="auto_C1C0_C2B2" state="1" edges="C1C0 C0B0 B0B1 B1C1 C1C2 C2B2"/>
+    <route id="auto_C1C0_C2C1" state="1" edges="C1C0 C0B0 B0B1 B1B2 B2C2 C2C1"/>
+    <route id="auto_C1C2_A0A1" state="1" edges="C1C2 C2B2 B2B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_C1C2_A0B0" state="1" edges="C1C2 C2B2 B2A2 A2A1 A1A0 A0B0"/>
+    <route id="auto_C1C2_A1A0" state="1" edges="C1C2 C2B2 B2A2 A2A1 A1A0"/>
+    <route id="auto_C1C2_A1A2" state="1" edges="C1C2 C2B2 B2B1 B1A1 A1A2"/>
+    <route id="auto_C1C2_A1B1" state="1" edges="C1C2 C2B2 B2A2 A2A1 A1B1"/>
+    <route id="auto_C1C2_A2A1" state="1" edges="C1C2 C2B2 B2A2 A2A1"/>
+    <route id="auto_C1C2_A2B2" state="1" edges="C1C2 C2B2 B2B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_C1C2_B0A0" state="1" edges="C1C2 C2B2 B2B1 B1B0 B0A0"/>
+    <route id="auto_C1C2_B0B1" state="1" edges="C1C2 C2B2 B2B1 B1B0 B0B1"/>
+    <route id="auto_C1C2_B0C0" state="1" edges="C1C2 C2B2 B2B1 B1B0 B0C0"/>
+    <route id="auto_C1C2_B2A2" state="1" edges="C1C2 C2B2 B2A2"/>
+    <route id="auto_C1C2_B2B1" state="1" edges="C1C2 C2B2 B2B1"/>
+    <route id="auto_C1C2_B2C2" state="1" edges="C1C2 C2B2 B2C2"/>
+    <route id="auto_C1C2_C0B0" state="1" edges="C1C2 C2B2 B2B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_C1C2_C0C1" state="1" edges="C1C2 C2B2 B2B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_C1C2_C1B1" state="1" edges="C1C2 C2B2 B2C2 C2C1 C1B1"/>
+    <route id="auto_C1C2_C1C0" state="1" edges="C1C2 C2B2 B2B1 B1C1 C1C0"/>
+    <route id="auto_C1C2_C2B2" state="1" edges="C1C2 C2B2"/>
+    <route id="auto_C1C2_C2C1" state="1" edges="C1C2 C2B2 B2C2 C2C1"/>
+    <route id="auto_C2B2_A0A1" state="1" edges="C2B2 B2B1 B1B0 B0A0 A0A1"/>
+    <route id="auto_C2B2_A0B0" state="1" edges="C2B2 B2A2 A2A1 A1A0 A0B0"/>
+    <route id="auto_C2B2_A1A0" state="1" edges="C2B2 B2A2 A2A1 A1A0"/>
+    <route id="auto_C2B2_A1A2" state="1" edges="C2B2 B2B1 B1A1 A1A2"/>
+    <route id="auto_C2B2_A1B1" state="1" edges="C2B2 B2A2 A2A1 A1B1"/>
+    <route id="auto_C2B2_A2A1" state="1" edges="C2B2 B2A2 A2A1"/>
+    <route id="auto_C2B2_A2B2" state="1" edges="C2B2 B2B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_C2B2_B0A0" state="1" edges="C2B2 B2B1 B1B0 B0A0"/>
+    <route id="auto_C2B2_B0B1" state="1" edges="C2B2 B2B1 B1B0 B0B1"/>
+    <route id="auto_C2B2_B0C0" state="1" edges="C2B2 B2B1 B1B0 B0C0"/>
+    <route id="auto_C2B2_B2A2" state="1" edges="C2B2 B2A2"/>
+    <route id="auto_C2B2_B2B1" state="1" edges="C2B2 B2B1"/>
+    <route id="auto_C2B2_B2C2" state="1" edges="C2B2 B2C2"/>
+    <route id="auto_C2B2_C0B0" state="1" edges="C2B2 B2B1 B1C1 C1C0 C0B0"/>
+    <route id="auto_C2B2_C0C1" state="1" edges="C2B2 B2B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_C2B2_C1B1" state="1" edges="C2B2 B2C2 C2C1 C1B1"/>
+    <route id="auto_C2B2_C1C0" state="1" edges="C2B2 B2B1 B1C1 C1C0"/>
+    <route id="auto_C2B2_C1C2" state="1" edges="C2B2 B2B1 B1C1 C1C2"/>
+    <route id="auto_C2B2_C2C1" state="1" edges="C2B2 B2C2 C2C1"/>
+    <route id="auto_C2C1_A0A1" state="1" edges="C2C1 C1C0 C0B0 B0A0 A0A1"/>
+    <route id="auto_C2C1_A0B0" state="1" edges="C2C1 C1B1 B1A1 A1A0 A0B0"/>
+    <route id="auto_C2C1_A1A0" state="1" edges="C2C1 C1B1 B1A1 A1A0"/>
+    <route id="auto_C2C1_A1A2" state="1" edges="C2C1 C1B1 B1A1 A1A2"/>
+    <route id="auto_C2C1_A1B1" state="1" edges="C2C1 C1B1 B1A1 A1B1"/>
+    <route id="auto_C2C1_A2A1" state="1" edges="C2C1 C1B1 B1B2 B2A2 A2A1"/>
+    <route id="auto_C2C1_A2B2" state="1" edges="C2C1 C1B1 B1A1 A1A2 A2B2"/>
+    <route id="auto_C2C1_B0A0" state="1" edges="C2C1 C1C0 C0B0 B0A0"/>
+    <route id="auto_C2C1_B0B1" state="1" edges="C2C1 C1C0 C0B0 B0B1"/>
+    <route id="auto_C2C1_B0C0" state="1" edges="C2C1 C1B1 B1B0 B0C0"/>
+    <route id="auto_C2C1_B2A2" state="1" edges="C2C1 C1B1 B1B2 B2A2"/>
+    <route id="auto_C2C1_B2B1" state="1" edges="C2C1 C1B1 B1B2 B2B1"/>
+    <route id="auto_C2C1_B2C2" state="1" edges="C2C1 C1B1 B1B2 B2C2"/>
+    <route id="auto_C2C1_C0B0" state="1" edges="C2C1 C1C0 C0B0"/>
+    <route id="auto_C2C1_C0C1" state="1" edges="C2C1 C1B1 B1B0 B0C0 C0C1"/>
+    <route id="auto_C2C1_C1B1" state="1" edges="C2C1 C1B1"/>
+    <route id="auto_C2C1_C1C0" state="1" edges="C2C1 C1C0"/>
+    <route id="auto_C2C1_C1C2" state="1" edges="C2C1 C1C2"/>
+    <route id="auto_C2C1_C2B2" state="1" edges="C2C1 C1C2 C2B2"/>
+    <route id="route_horizontal" state="1" edges="B0B1 B1B2"/>
+    <route id="route_vertical" state="1" edges="A1B1 B1C1"/>
+    <delay number="25" begin="78" end="53" depart="0.10" time="1956.50" speedFactor="1.21" decel="4.50"/>
+    <vType id="DEFAULT_VEHTYPE"/>
+    <vType id="car" length="5.00" minGap="2.50" maxSpeed="13.89" accel="2.6" decel="4.5" sigma="0.5"/>
+    <vehicle id="veh_45_5912" type="car" depart="4.50" departPos="random_free" departSpeed="random" route="auto_B0C0_A0A1" distance="302.36 0" speedFactor="0.9918" state="26 4500 3 78.95 0 168.18 199900 0 0 0" pos="79.20 74.20 0.03" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 0" lcStateBase="604160.00 inf 0.00" lcState2="0 0 -136156825 18 0"/>
+    <vehicle id="veh_185_8388" type="car" depart="18.50" departPos="random_free" departSpeed="random" route="auto_B2B1_C2C1" distance="83.87 0" speedFactor="0.9541" state="26 18500 1 59.19 0 169.32 199900 0 0 0" pos="79.20 74.20 0.03" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 0" lcStateBase="0.00" lcState2="0 -237925 -523726037 16 0"/>
+    <vehicle id="veh_302_7064" type="car" depart="30.20" departPos="random_free" departSpeed="random" route="auto_B2C2_B2B1" distance="266.24 0" speedFactor="1.0332" state="26 30200 3 24.65 131800 145.28 199900 0 0 0" pos="71.70 66.70 0.00" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 1 0 131800" lcStateBase="9.00" lcState2="0 0 0 148 0"/>
+    <vehicle id="veh_355_8382" type="car" depart="35.50" departPos="random_free" departSpeed="random" route="auto_B2A2_C1C0" distance="303.81 0" speedFactor="1.0681" state="26 35500 3 50.42 0 136.81 199900 0 0 0" pos="79.20 74.20 0.03" speed="0.00 0.00" angle="90.00" posLat="0.00" waitingTime="100000 0" lcStateBase="10240.00" lcState2="0 0 -369877761 137 0"/>
+    <vehicle id="veh_363_6509" type="car" depart="36.30" departPos="random_free" departSpeed="random" route="auto_A0A1_C2B2" distance="192.23 0" speedFactor="0.8716" state="26 36300 2 76.12 15000 147.82 199900 0 0 0" pos="64.20 59.20 0.00" speed="0.00 0.00" angle="90.00" posLat="0.00" waitingTime="100000 2 0 15000 30400 148300" lcStateBase="9.00" lcState2="0 0 0 16679046 0"/>
+    <vehicle id="veh_394_8444" type="car" depart="39.40" departPos="random_free" departSpeed="random" route="auto_A1B1_A0A1" distance="88.23 0" speedFactor="0.8761" state="26 39400 1 46.83 0 148.38 199900 0 0 0" pos="63.09 58.09 0.02" speed="0.22 0.00" angle="180.00" posLat="0.00" waitingTime="100000 67 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200 2300 2400 2500 2600 2700 2800 2900 3000 3100 3200 3300 3400 3500 3600 3700 3800 3900 4000 4100 4200 4300 4400 4500 4600 4700 4800 4900 5000 5100 5200 5300 5400 5500 5600 5700 5800 5900 6000 6100 6200 6300 6400 6500 6600 6700 6800 6900 7000 7100 7200 7300 7400 7500 7600 7700 7800 7900 8000 8200 8300 12100 12200 12700 12800 13300 13400 13700 13800 14300 14400 14600 14700 14900 15000 15200 15300 15400 15500 15600 15700 15800 15900 16000 16100 16300 16400 16500 16600 16700 16800 16900 17000 17100 17200 17300 17400 17500 17600 17700 17800 18100 18200 18500 18600 18900 19000 19300 19400 19600 19700 22000 22100" lcStateBase="0.00" lcState2="0 0 0 0 0"/>
+    <vehicle id="veh_483_7955" type="car" depart="48.30" departPos="random_free" departSpeed="random" route="auto_A0A1_B0C0" distance="180.46 0" speedFactor="0.9992" state="26 48300 2 59.13 125500 136.22 199900 0 0 0" pos="71.70 66.70 0.00" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 1 0 125500" lcStateBase="735241.00 27.78 0.00 inf 0.00" lcState2="0 0 0 277 0"/>
+    <vehicle id="veh_571_2436" type="car" depart="57.10" departPos="random_free" departSpeed="random" route="auto_C0C1_C2C1" distance="364.79 0" speedFactor="1.0641" state="26 57100 4 24.60 0 110.83 199900 0 0 0" pos="45.19 40.19 1.37" speed="13.72 13.71" angle="180.00" posLat="0.00" waitingTime="100000 2 14400 14500 16700 16800" lcStateBase="0.00" lcState2="0 0 -277287 137737017 0"/>
+    <vehicle id="veh_597_8914" type="car" depart="59.70" departPos="random_free" departSpeed="random" route="auto_A0A1_B0C0" distance="180.46 0" speedFactor="1.0274" state="26 59700 2 37.98 0 120.66 199900 0 0 0" pos="79.20 74.20 0.03" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 0" lcStateBase="9216.00" lcState2="0 0 0 234 0"/>
+    <vehicle id="veh_604_4206" type="car" depart="60.40" departPos="random_free" departSpeed="random" route="auto_C1C2_C0C1" distance="303.81 0" speedFactor="1.0637" state="26 60400 3 34.65 89100 113.31 199900 0 0 0" pos="76.70 71.70 0.00" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 24 0 89100 94700 94800 94900 95000 95100 95200 95300 95400 95500 95600 95700 95800 95900 96000 96100 96200 96300 96400 96500 96600 96700 96800 96900 97000 97100 97200 97300 97400 97500 97600 97700 97800 97900 98000 98100 98200 98300 98400 98900 99000 99200 99300 99600 99700 99900 100000" lcStateBase="0.00" lcState2="0 0 0 0 0"/>
+    <vehicle id="veh_629_6361" type="car" depart="62.90" departPos="random_free" departSpeed="random" route="auto_A0A1_C2B2" distance="0 0" speedFactor="1.0778" state="26 62900 0 9.16 0 129.21 199900 0 0 0" pos="83.20 78.20 0.03" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 0" lcStateBase="0.00" lcState2="0 -543028 -458222890 285 0"/>
+    <vehicle id="veh_693_2047" type="car" depart="69.30" departPos="random_free" departSpeed="random" route="auto_A2A1_A0A1" distance="190.78 0" speedFactor="0.9917" state="26 69300 2 9.97 67900 110.85 199900 0 0 0" pos="71.70 66.70 0.00" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 124 0 67900 68000 68100 68200 68300 68400 68500 68600 68700 68800 68900 69000 69100 69200 69300 69400 69500 69600 69700 69800 69900 70000 70100 70200 70300 70400 70500 70600 70700 70800 70900 71000 71100 71200 71300 71400 71500 71600 71700 71800 71900 72000 72100 72200 72300 72400 72500 72600 72700 72800 72900 73000 73100 73200 73300 73400 73500 73600 73700 73800 73900 74000 74100 74200 74300 74400 74500 74600 74700 74800 74900 75000 75100 75200 75300 75400 75500 75600 75700 75800 75900 76000 76100 76200 76300 76400 76500 76600 76700 76800 76900 77000 77100 77200 77300 77400 77500 77600 77700 77800 77900 78000 78100 78200 78300 78400 78500 78600 78700 78800 78900 79000 79100 79200 79300 79400 79500 79600 79700 79800 79900 80000 80100 80200 80300 80400 80500 80600 80700 80800 80900 81000 81100 81200 81300 81400 81500 81600 81700 81800 81900 82000 82100 82200 82300 82400 82500 82600 82700 82800 82900 83000 83100 83200 83300 83400 83500 83600 83700 83800 83900 84000 84100 84200 84300 84400 84500 84600 84700 84800 84900 85000 85100 85200 85300 85400 85500 85600 85700 85800 85900 86000 86100 86200 86300 86400 86500 86600 86700 86800 86900 87000 87100 87200 87300 87400 87500 87600 87700 87800 87900 88000 88100 88200 88300 88400 88500 94300 94700 94800 94900 95000 95100 95200 95300 95400 95500 95600 95700 95800 95900 96000 96100 96200 96300 96400 96500 96600 96700 96800 96900 97000 97100 97200 97300 97400 97500 97600 97700 97800 97900 98000 98100 98200 98300 98400 98800" lcStateBase="9737.00" lcState2="0 0 0 6892 0"/>
+    <vehicle id="veh_794_3500" type="car" depart="79.40" departPos="random_free" departSpeed="random" route="auto_A0B0_B2B1" distance="202.55 0" speedFactor="0.8763" state="26 79400 2 78.45 97900 104.86 199900 0 0 0" pos="56.70 51.70 0.00" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 1 0 97900" lcStateBase="9.00" lcState2="0 0 0 3791 0"/>
+    <vehicle id="veh_827_3131" type="car" depart="82.70" departPos="random_free" departSpeed="random" route="auto_B0B1_B2B1" distance="100 0" speedFactor="0.9057" state="26 82700 1 41.09 100500 107.41 199900 0 0 0" pos="64.20 59.20 0.00" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 1 0 100500" lcStateBase="9.00" lcState2="0 0 0 3193 0"/>
+    <vehicle id="veh_867_4090" type="car" depart="86.70" departPos="random_free" departSpeed="random" route="auto_A0A1_B2A2" distance="190.78 0" speedFactor="0.8526" state="26 86700 2 41.82 11400 94.79 199900 0 0 0" pos="49.20 44.20 0.00" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 2 0 11400 29700 97200" lcStateBase="9.00" lcState2="0 0 0 21679424 0"/>
+    <vehicle id="veh_953_4150" type="car" depart="95.30" departPos="random_free" departSpeed="random" route="auto_B2A2_C1B1" distance="298.65 0" speedFactor="0.9739" state="26 95300 3 19.93 10600 78.33 199900 0 0 0" pos="56.70 51.70 0.00" speed="0.00 0.00" angle="90.00" posLat="0.00" waitingTime="100000 2 0 10600 29300 78700" lcStateBase="9.00" lcState2="0 0 0 27994186 0"/>
+    <vehicle id="veh_977_5795" type="car" depart="97.70" departPos="random_free" departSpeed="random" route="auto_C0C1_C1B1" distance="0 0" speedFactor="1.0432" state="26 97700 0 40.72 0 97.27 199900 0 0 0" pos="83.20 78.20 0.03" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 0" lcStateBase="0.00" lcState2="0 0 0 6648 0"/>
+    <vehicle id="veh_1075_361" type="car" depart="107.50" departPos="random_free" departSpeed="random" route="auto_A1A2_C1C2" distance="276.56 0" speedFactor="0.9967" state="26 107500 3 20.14 55900 66.85 199900 0 0 0" pos="71.70 66.70 0.00" speed="0.00 0.00" angle="90.00" posLat="0.00" waitingTime="100000 1 0 55900" lcStateBase="9.00" lcState2="0 0 0 304333 0"/>
+    <vehicle id="veh_1145_2705" type="car" depart="114.50" departPos="random_free" departSpeed="random" route="auto_C1C2_A2B2" distance="203.81 0" speedFactor="0.9349" state="26 114500 2 60.59 0 65.46 199900 0 0 0" pos="79.20 74.20 0.03" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 0" lcStateBase="0.00" lcState2="0 0 -115600000 4941005 0"/>
+    <vehicle id="veh_1175_1987" type="car" depart="117.50" departPos="random_free" departSpeed="random" route="auto_B0B1_B0C0" distance="83.87 0" speedFactor="0.7661" state="26 117500 1 7.15 9500 66.40 199900 0 0 0" pos="69.20 64.20 0.00" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 32 0 9500 15200 15300 15400 15500 15600 15700 15800 15900 16000 16100 16300 16400 16500 16600 16700 16800 16900 17000 17100 17200 17300 17400 17500 17600 17700 17800 17900 18000 18100 18200 18300 18400 18500 18600 18700 18800 18900 19000 19100 19200 19300 19400 19500 19600 19800 19900 20100 20200 20400 20500 20700 20800 21000 21100 21300 21400 21600 21700 21900 22000 23900 24000" lcStateBase="0.00" lcState2="0 0 0 0 0"/>
+    <vehicle id="veh_1176_2412" type="car" depart="117.60" departPos="random_free" departSpeed="random" route="auto_A2A1_C1C2" distance="202.55 0" speedFactor="1.0437" state="26 117600 2 26.69 0 62.38 199900 0 0 0" pos="79.20 74.20 0.03" speed="0.00 0.00" angle="90.00" posLat="0.00" waitingTime="100000 6 22400 22500 23200 23300 24000 24100 24800 24900 36800 36900 38100 38200" lcStateBase="9216.00" lcState2="0 0 0 1098166 0"/>
+    <vehicle id="veh_1450_8881" type="car" depart="145.00" departPos="random_free" departSpeed="random" route="auto_A2A1_B2A2" distance="201.1 0" speedFactor="1.1852" state="26 145000 2 18.84 9000 38.03 199900 0 0 0" pos="41.69 36.69 0.00" speed="0.00 0.00" angle="0.00" posLat="0.00" waitingTime="100000 2 0 9000 28700 39200" lcStateBase="9.00" lcState2="0 0 0 27246715 0"/>
+    <vehicle id="veh_1499_8843" type="car" depart="149.90" departPos="random_free" departSpeed="random" route="auto_C2B2_B0B1" distance="202.55 0" speedFactor="0.8655" state="26 149900 2 14.51 12900 28.85 199900 0 0 0" pos="56.70 51.70 0.00" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 31 0 12900 15200 15300 15400 15500 15600 15700 15800 15900 16000 16100 16300 16400 16500 16600 16700 16800 16900 17000 17100 17200 17300 17400 17500 17600 17700 17800 17900 18000 18100 18200 18300 18400 18500 18600 18700 18800 18900 19000 19100 19200 19300 19400 19500 19600 19800 19900 20100 20200 20400 20500 20700 20800 21000 21100 21300 21400 21600 21700 21900 22000" lcStateBase="655369.00 29.95 0.00" lcState2="0 0 0 10953293 0"/>
+    <vehicle id="veh_1577_3159" type="car" depart="157.70" departPos="random_free" departSpeed="random" route="auto_B2B1_B0C0" distance="100 0" speedFactor="1.0370" state="26 157700 1 30.63 26100 32.58 199900 0 0 0" pos="64.20 59.20 0.00" speed="0.00 0.00" angle="180.00" posLat="0.00" waitingTime="100000 1 0 26100" lcStateBase="733193.00 27.78 0.00 inf 0.00" lcState2="0 0 0 6106185 0"/>
+    <vehicle id="veh_1935_6227" type="car" depart="193.50" departPos="random_free" departSpeed="random" route="auto_A2B2_B0C0" distance="83.2 0" speedFactor="1.0030" state="26 193500 0 11.44 0 0.54 199900 0 0 0" pos="4.49 82.69 0.64" speed="6.42 6.41" angle="106.51" posLat="0.00" waitingTime="100000 0" lcStateBase="0.00" lcState2="0 0 0 0 0"/>
+    <lane id=":B2_7_0">
+        <vehicles value="veh_1935_6227"/>
+    </lane>
+    <lane id="A0A1_1">
+        <vehicles value="veh_629_6361"/>
+    </lane>
+    <lane id="B1B0_0">
+        <vehicles value="veh_693_2047 veh_597_8914"/>
+    </lane>
+    <lane id="B1B0_1">
+        <vehicles value="veh_1499_8843 veh_394_8444 veh_1577_3159 veh_1175_1987 veh_483_7955 veh_604_4206 veh_45_5912"/>
+    </lane>
+    <lane id="B1B2_1">
+        <vehicles value="veh_1450_8881 veh_867_4090 veh_794_3500 veh_827_3131 veh_302_7064 veh_185_8388"/>
+    </lane>
+    <lane id="B1C1_0">
+        <vehicles value="veh_1176_2412"/>
+    </lane>
+    <lane id="B1C1_1">
+        <vehicles value="veh_953_4150 veh_363_6509 veh_1075_361 veh_355_8382"/>
+    </lane>
+    <lane id="B2B1_1">
+        <vehicles value="veh_1145_2705"/>
+    </lane>
+    <lane id="C0C1_0">
+        <vehicles value="veh_977_5795"/>
+    </lane>
+    <lane id="C2C1_1">
+        <vehicles value="veh_571_2436"/>
+    </lane>
+</snapshot>

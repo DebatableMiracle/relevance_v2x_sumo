@@ -1,0 +1,91 @@
+In Rafa files, vehicles start at any position and end their trip at any location.
+When we generate tcl file, the vehciles location that end their trips will be in the same location and keeps on transmitting the messages.
+In order to avoid it, the vehicles should start and stop their trips at the ends so that we can filter them.
+
+
+randomTrips.py -n manhattan9x7_speed14.net.xml --begin 0 --end 1000 \ --flows 475 --jtrrouter \ --trip attributes 'departPos="random" departSpeed="max" '
+
+
+"C:\Gokul-TransAid\SUMO\sumo-1.6.0\tools\randomTrips.py" -n manhattan9x7_speed14.net.xml -b 0 -e 500 --fringe-factor 80
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 500 --fringe-factor 80
+
+
+"C:\Program Files (x86)\Eclipse\Sumo\tools\randomTrips.py" -n manhattan9x7_speed14.net.xml -b 0 -e 500 --fringe-factor 100 --route-file gok.rou.xml
+
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 500 --allow-fringe --route-file gok.rou.xml
+
+randomTrips.py -n manhattan9x7_speed14.net.xml -o flows.xml --begin 0 --end 1 \
+       --flows 100 --jtrrouter \
+       --trip-attributes 'departPos="random" departSpeed="max"' 
+	   
+	   
+randomTrips.py --weights-prefix example  --intermediate 2 -n manhattan9x7_speed14.net.xml -b 0 -e 350 --period 0.2 --route-file gok.rou.xml 
+
+manhattan_6 command can be considered for low density
+randomTrips.py --weights-prefix example  --intermediate 1 -n manhattan9x7_speed14.net.xml -b 0 -e 410 --period 0.2 --route-file gok.rou.xml 
+
+manhattan_7 command can be considered for high density
+400s-1900  450s-2231 500s-2474veh
+randomTrips.py --weights-prefix example  --intermediate 2 -n manhattan9x7_speed14.net.xml -b 0 -e 500 --period 0.2 --route-file gok.rou.xml
+
+
+
+
+for LOW1
+randomTrips.py --weights-prefix example  --intermediate 1 -n manhattan9x7_speed14.net.xml -b 0 -e 150 --period 0.2 --route-file gok.rou.xml 
+
+for LOW2
+randomTrips.py --weights-prefix example  --intermediate 1 -n manhattan9x7_speed14.net.xml -b 0 -e 150 --period 0.3 --route-file gok.rou.xml 
+
+for LOW3 CHECK1
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 200 --period 0.3 --route-file gok.rou.xml 
+
+for HIGH3 CHECK1
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 150 --period 0.2 --route-file gok.rou.xml
+
+for HIGH4
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 200 --period 0.2 --route-file gok.rou.xml
+
+for HIGH5
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 150 --period 0.1 --route-file gok.rou.xml
+
+	<edge id="b" value="0.5"/>
+    <edge id="b" value="0.5"/>
+	
+		
+	--turn-defaults 25,50,25 (not working in ransomtrips.py, I think it works only in the JTRrouter)
+	
+	
+	
+	
+	sumo -c manhattan9x7_speed14_R2.8_seed1.sumo.cfg --fcd-output sumoTrace.xml
+	traceExporter.py --fcd-input sumoTrace.xml --ns2mobility-output ns2mobility.tcl
+	
+	XML to CSV
+	python xml2csv.py sumoTrace.xml 
+	
+manhattan_3 -Numcars:748+1, Running veh;200s;500 at 300s:728
+
+
+31/07/20
+For low density I created 3 tcl files using the same command
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 150 --period 0.2 --route-file gok.rou.xml
+
+	sumo -c manhattan9x7_speed14_R2.8_seed1.sumo.cfg --fcd-output sumoTrace.xml
+	traceExporter.py --fcd-input sumoTrace.xml --ns2mobility-output ns2mobility.tcl
+	
+	
+For High density I created 3 tcl files using the same command	
+randomTrips.py -n manhattan9x7_speed14.net.xml -b 0 -e 150 --period 0.1 --route-file gok.rou.xml
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+_wandb:
+    value:
+        cli_version: 0.28.1
+        code_path: code/sim/train_ppo.py
+        e:
+            npk7x4gkw2s16fbrdc2fr1hy73anrmsh:
+                codePath: sim/train_ppo.py
+                codePathLocal: sim/train_ppo.py
+                cpu_count: 8
+                cpu_count_logical: 12
+                disk:
+                    /:
+                        total: "217203978240"
+                        used: "143410221056"
+                email: anubhavvermadelhi@gmail.com
+                executable: /home/anubhav/anaconda3/envs/sumo/bin/python
+                host: r2-d2
+                memory:
+                    total: "24802983936"
+                os: Linux-6.8.0-136-generic-x86_64-with-glibc2.35
+                program: /home/anubhav/development/sumoslammers/relevance_v2x/sim/train_ppo.py
+                python: CPython 3.10.0
+                root: /home/anubhav/development/sumoslammers/relevance_v2x
+                startedAt: "2026-08-14T08:32:29.961743Z"
+                writerId: npk7x4gkw2s16fbrdc2fr1hy73anrmsh
+        m: []
+        python_version: 3.10.0
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 16
+                - 22
+                - 35
+            "4": 3.10.0
+            "5": 0.28.1
+            "8":
+                - 2
+            "12": 0.28.1
+            "13": linux-x86_64
+algo:
+    value: PPO
+batch_size:
+    value: 32
+broadcast_k:
+    value: 3
+cav_penetration:
+    value: 0.5
+learning_rate:
+    value: 0.0003
+max_steps_per_episode:
+    value: 64
+max_vehicles:
+    value: 25
+n_steps:
+    value: 64
+spawn_rate:
+    value: 0.2
+total_timesteps:
+    value: 100000

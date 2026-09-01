@@ -1,0 +1,24 @@
+{
+  "os":  "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.10.0",
+  "startedAt":  "2026-08-14T08:32:52.548844Z",
+  "program":  "/home/anubhav/development/sumoslammers/relevance_v2x/sim/train_ppo.py",
+  "codePath":  "sim/train_ppo.py",
+  "codePathLocal":  "sim/train_ppo.py",
+  "email":  "anubhavvermadelhi@gmail.com",
+  "root":  "/home/anubhav/development/sumoslammers/relevance_v2x",
+  "host":  "r2-d2",
+  "executable":  "/home/anubhav/anaconda3/envs/sumo/bin/python",
+  "cpu_count":  8,
+  "cpu_count_logical":  12,
+  "disk":  {
+    "/":  {
+      "total":  "217203978240",
+      "used":  "143410274304"
+    }
+  },
+  "memory":  {
+    "total":  "24802983936"
+  },
+  "writerId":  "yedx6cwpom9mdt9bc3uo0bnr7dxw0byl"
+}

@@ -1,0 +1,7 @@
+<launch>
+<copy file="manhattan9x7_speed14.net.xml"/>
+<copy file="manhattan9x7_speed14.poly.xml"/>
+<copy file="manhattan9x7_speed14_R2.8_seed1.rou.xml"/>
+<copy file="manhattan9x7_speed14_R2.8_seed1.sumo.cfg" type="config"/>
+<copy file="manhattan9x7_speed14_R2.8_seed1.launchd.xml"/>
+</launch>
