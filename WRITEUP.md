@@ -303,5 +303,4 @@ Success criteria: actual position ≈ target position every step (no drift, unli
 
 ## Not needed for current scope (per advisor guidance / analysis)
 - ❌ CARLA (SUMO's structured ground-truth state is sufficient; CARLA's GPU cost buys camera/LiDAR rendering fidelity you don't need)
-- ❌ ns-3 / OMNeT++ / Veins radio-layer co-simulation (explicitly deferred by advisor — future work item)
 - ❌ Autoware / LiDAR-based planning policy (paper itself bypasses Autoware's perception stack and feeds structured object state directly to planning — same abstraction level as your TraCI calls)
