@@ -34,7 +34,8 @@ MAP_REGISTRY = {
 class TrafficEnv:
     def __init__(self, map_name="grid", gui=False, spawn_rate=0.3, sense_range=50.0,
                  comm_range=175.0, broadcast_k=3, cav_penetration=0.5,
-                 max_vehicles=25, checkpoint_every=2000, checkpoint_path="../logs/checkpoint.xml"):
+                 max_vehicles=25, checkpoint_every=2000, checkpoint_path="../logs/checkpoint.xml",
+                 communication_enabled=True):
         map_cfg = MAP_REGISTRY[map_name]
         self.config = map_cfg["config"]
         self.net_file = map_cfg["net_file"]
@@ -47,9 +48,11 @@ class TrafficEnv:
         self.max_vehicles = max_vehicles
         self.checkpoint_every = checkpoint_every
         self.checkpoint_path = checkpoint_path
+        self.communication_enabled = communication_enabled
 
         self.health = RoadHealthTracker(comm_range=comm_range)
         self.cav_ids = set()
+        self.all_managed_ids = set()
         self._route_pool = []
         self._global_step = 0
     def start(self):
@@ -93,16 +96,22 @@ class TrafficEnv:
                                departPos="random_free", departSpeed="random")
         except traci.exceptions.TraCIException:
             return
+
+        disable_native_safety(vid)      # EVERY vehicle uses our policy now
+        self.all_managed_ids.add(vid)   # new: tracks every policy-driven vehicle
+
         if random.random() < self.cav_penetration:
-            self.register_cav(vid)
+            self.cav_ids.add(vid)       # only CAVs can RECEIVE broadcasts
 
     def register_cav(self, vid):
         disable_native_safety(vid)
+        self.all_managed_ids.add(vid)
         self.cav_ids.add(vid)
 
     def _cleanup_despawned(self):
         active = set(traci.vehicle.getIDList())
         self.cav_ids &= active
+        self.all_managed_ids &= active
 
     def get_observations(self):
         obs = {}
@@ -140,11 +149,15 @@ class TrafficEnv:
                 if ((tx_x - rx_x) ** 2 + (tx_y - rx_y) ** 2) ** 0.5 <= self.comm_range:
                     received[rx_id].update(packet)
 
-        for vid in list(self.cav_ids):
+        for vid in list(self.all_managed_ids):
             if vid not in traci.vehicle.getIDList():
                 continue
-            theta = get_known_objects(vid, broadcast_objects=received.get(vid, {}),
-                                       sensing_range=self.sense_range, use_occlusion=True)
+            if vid in self.cav_ids and self.communication_enabled:
+                theta = get_known_objects(vid, broadcast_objects=received.get(vid, {}),
+                                           sensing_range=self.sense_range, use_occlusion=True)
+            else:
+                theta = get_known_objects(vid, broadcast_objects=None,
+                                           sensing_range=self.sense_range, use_occlusion=True)
             step_policy(vid, theta)
 
         traci.simulationStep()
