@@ -53,3 +53,11 @@ bash
 wandb login   # one-time
 
 Runs auto-log to your v2x-broadcast-selection project when train_ippo.py runs with --wandb (default on).
+
+| CAV penetration |  k | Critical/1k | Warning/1k | Mean TTC | Mean speed |
+| --------------: | -: | ----------: | ---------: | -------: | ---------: |
+|    0% baseline* |  — |         7.5 |       13.5 |    85.99 |       6.99 |
+|             10% |  3 |        11.5 |    **6.5** |    97.83 |       6.99 |
+|             25% |  3 |     **0.0** |    **0.0** |    98.23 |       6.32 |
+|             50% |  1 |         6.5 |       31.5 |    68.49 |       6.93 |
+|             50% |  3 |        49.0 |       54.5 |    37.77 |       6.76 |
