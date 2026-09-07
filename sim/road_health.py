@@ -88,6 +88,13 @@ class RoadHealthTracker:
         self._prev_speed = {k: v for k, v in self._prev_speed.items() if k in active}
         self._prev_H = {k: v for k, v in self._prev_H.items() if k in active}
 
+    def commit_speeds(self):
+        """Call once per env.step after all compute_reward calls so every Tx
+        scores harsh braking against the same previous-step snapshot."""
+        self._prev_speed = {
+            vid: traci.vehicle.getSpeed(vid) for vid in traci.vehicle.getIDList()
+        }
+
     # ---------------------------------------------------------------
     # TTC threshold event detection/logging
     # ---------------------------------------------------------------
@@ -217,7 +224,6 @@ class RoadHealthTracker:
             accel = (speed - prev) / 0.1
             if accel < HARSH_BRAKE_THRESHOLD:
                 harsh_brakes += 1
-            self._prev_speed[vid] = speed
 
         ttc_p10 = np.percentile(ttcs, 10) if len(ttcs) >= 2 else (ttcs[0] if ttcs else None)
         ttc_var = np.var(ttcs) if len(ttcs) > 1 else 0.0

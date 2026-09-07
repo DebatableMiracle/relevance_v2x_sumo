@@ -2,10 +2,43 @@
 Layer 2: Perception + broadcast fusion.
 Builds theta = LOS-visible objects UNION broadcast-received objects,
 for a given ego vehicle at the current sim step.
+
+LOS occluders: other vehicles' bounding boxes AND (when loaded) building
+polygons from the map's poly.xml — without buildings, Manhattan corners
+are optically transparent and V2X has almost nothing to reveal.
 """
 import math
+import os
+import xml.etree.ElementTree as ET
 import traci
-from shapely.geometry import LineString, box
+from shapely.geometry import LineString, Polygon, box
+
+
+_BUILDING_POLYS = []
+
+
+def load_building_polygons(path):
+    """Parse SUMO poly.xml / obstacles.xml; shrink slightly so street
+    corridors are not clipped by building corners."""
+    global _BUILDING_POLYS
+    _BUILDING_POLYS = []
+    if not path or not os.path.isfile(path):
+        return 0
+    tree = ET.parse(path)
+    for poly in tree.getroot().iter("poly"):
+        shape = poly.get("shape") or ""
+        pts = []
+        for tok in shape.strip().split():
+            if "," not in tok:
+                continue
+            x, y = tok.split(",")
+            pts.append((float(x), float(y)))
+        if len(pts) < 3:
+            continue
+        geom = Polygon(pts)
+        shrunk = geom.buffer(-1.0)
+        _BUILDING_POLYS.append(shrunk if not shrunk.is_empty else geom)
+    return len(_BUILDING_POLYS)
 
 
 def get_vehicle_state(vid):
@@ -17,6 +50,7 @@ def get_vehicle_state(vid):
         "angle": traci.vehicle.getAngle(vid),
         "lane": traci.vehicle.getLaneID(vid),
         "lane_index": traci.vehicle.getLaneIndex(vid),
+        "edge": traci.vehicle.getRoadID(vid),
         "length": traci.vehicle.getLength(vid),
         "width": traci.vehicle.getWidth(vid),
     }
@@ -37,8 +71,11 @@ def get_vehicle_obstacle_polygons(exclude_ids=()):
     return polys
 
 
-def has_line_of_sight(p1, p2, obstacle_polys, ignore_ids=()):
+def has_line_of_sight(p1, p2, obstacle_polys, ignore_ids=(), extra_polys=None):
     sightline = LineString([p1, p2])
+    for poly in (extra_polys or _BUILDING_POLYS):
+        if sightline.intersects(poly):
+            return False
     for oid, poly in obstacle_polys.items():
         if oid in ignore_ids:
             continue

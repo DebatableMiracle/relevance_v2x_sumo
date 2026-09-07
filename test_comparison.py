@@ -113,16 +113,20 @@ def make_model_broadcast_fn(model_path):
     model = PPO.load(model_path)
 
     def encode(tx_id, phi):
-        candidates = list(phi.items())[:N_MAX]
+        tx_x, tx_y = traci.vehicle.getPosition(tx_id)
+        candidates = sorted(
+            phi.items(),
+            key=lambda kv: (kv[1]["pos"][0] - tx_x) ** 2 + (kv[1]["pos"][1] - tx_y) ** 2,
+        )[:N_MAX]
         candidate_ids = [cid for cid, _ in candidates]
         feat = np.zeros((N_MAX, 6), dtype=np.float32)
-        tx_x, tx_y = traci.vehicle.getPosition(tx_id)
         tx_v = traci.vehicle.getSpeed(tx_id)
         for i, (cid, state) in enumerate(candidates):
             ox, oy = state["pos"]
             feat[i, 0] = ox - tx_x
             feat[i, 1] = oy - tx_y
             feat[i, 2] = state["speed"] - tx_v
+            feat[i, 3] = state["angle"]
             feat[i, 5] = 1.0
         own_speed = traci.vehicle.getSpeed(tx_id)
         own_angle = np.radians(traci.vehicle.getAngle(tx_id))

@@ -17,7 +17,7 @@ import random
 import traci
 import sumolib
 
-from perception import get_los_visible, get_known_objects, get_vehicle_state
+from perception import get_los_visible, get_known_objects, get_vehicle_state, load_building_polygons
 from driving_policy import disable_native_safety, step_policy
 from road_health import RoadHealthTracker
 
@@ -43,7 +43,11 @@ MAP_REGISTRY = {
         net_file=os.path.join(
             PROJECT_DIR,
             "net/manhattan/manhattan9x7_speed14.net.xml"
-        )
+        ),
+        poly_file=os.path.join(
+            PROJECT_DIR,
+            "net/manhattan/manhattan9x7_speed14.poly.xml"
+        ),
     ),
 }
 
@@ -68,6 +72,7 @@ class TrafficEnv:
         map_cfg = MAP_REGISTRY[map_name]
         self.config = map_cfg["config"]
         self.net_file = map_cfg["net_file"]
+        self.poly_file = map_cfg.get("poly_file")
         self.gui = gui
         self.spawn_rate = spawn_rate
         self.sense_range = sense_range
@@ -88,6 +93,8 @@ class TrafficEnv:
         from harness import start as sumo_start
 
         sumo_start(gui=self.gui, config=self.config)
+        n_buildings = load_building_polygons(self.poly_file)
+        print(f"[env] building occluders loaded: {n_buildings}")
 
         self._route_pool = self._discover_fringe_routes()
 
@@ -284,9 +291,10 @@ class TrafficEnv:
 
         rewards, info = {}, {}
 
-        for tx_id in broadcast_actions:
+        # Road-health for every active CAV, whether or not it transmitted this
+        # step — otherwise no_comm (step({})) never computes a reward at all.
+        for tx_id in self.cav_ids:
             if tx_id not in traci.vehicle.getIDList():
-                rewards[tx_id] = 0.0
                 continue
 
             tx_x, tx_y = traci.vehicle.getPosition(tx_id)
@@ -307,5 +315,7 @@ class TrafficEnv:
 
             rewards[tx_id] = r
             info[tx_id] = breakdown
+
+        self.health.commit_speeds()
 
         return self.get_observations(), rewards, info

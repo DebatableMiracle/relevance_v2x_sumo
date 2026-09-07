@@ -72,40 +72,7 @@ from stable_baselines3.common.buffers import RolloutBuffer  # noqa: E402
 from stable_baselines3.common.vec_env import DummyVecEnv  # noqa: E402
 from stable_baselines3.common.utils import obs_as_tensor  # noqa: E402
 
-# ---------------------------------------------------------------------------
-# Observation / action space definition (matches gym_env.py's encoding)
-# ---------------------------------------------------------------------------
-N_MAX = 20
-FEAT_DIM = 6
-OWN_DIM = 3
-OBS_DIM = N_MAX * FEAT_DIM + OWN_DIM
-
-
-def encode_obs(tx_id, phi):
-    """theta -> fixed-size observation vector + list of candidate object ids
-    (padded/truncated to N_MAX)."""
-    candidates = list(phi.items())[:N_MAX]
-    candidate_ids = [cid for cid, _ in candidates]
-
-    feat = np.zeros((N_MAX, FEAT_DIM), dtype=np.float32)
-    tx_x, tx_y = traci.vehicle.getPosition(tx_id)
-    tx_v = traci.vehicle.getSpeed(tx_id)
-
-    for i, (cid, state) in enumerate(candidates):
-        ox, oy = state["pos"]
-        feat[i, 0] = ox - tx_x
-        feat[i, 1] = oy - tx_y
-        feat[i, 2] = state["speed"] - tx_v
-        feat[i, 3] = 0.0
-        feat[i, 4] = 0.0
-        feat[i, 5] = 1.0  # valid mask
-
-    own_speed = traci.vehicle.getSpeed(tx_id)
-    own_angle = np.radians(traci.vehicle.getAngle(tx_id))
-    own = np.array([own_speed, np.sin(own_angle), np.cos(own_angle)], dtype=np.float32)
-
-    obs = np.concatenate([feat.flatten(), own])
-    return obs, candidate_ids
+from observation import encode_obs, N_MAX, OBS_DIM
 
 
 class _DummySpaceEnv(gym.Env):
@@ -207,10 +174,16 @@ for update in range(args.n_updates):
             env.step({})
             continue
 
+        los_by_cav = env.get_observations()
         obs_batch, cand_ids_batch, tx_batch = [], [], []
         for tx_id in active_cavs:
-            phi = env.get_observations().get(tx_id, {})
-            obs_vec, cand_ids = encode_obs(tx_id, phi)
+            phi = los_by_cav.get(tx_id, {})
+            obs_vec, cand_ids = encode_obs(
+                tx_id, phi,
+                los_by_cav=los_by_cav,
+                cav_ids=env.cav_ids,
+                comm_range=env.comm_range,
+            )
             obs_batch.append(obs_vec)
             cand_ids_batch.append(cand_ids)
             tx_batch.append(tx_id)

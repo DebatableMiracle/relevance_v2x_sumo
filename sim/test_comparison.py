@@ -104,47 +104,7 @@ def random_broadcast_fn(env):
     return actions
 
 
-def make_model_broadcast_fn(model_path):
-    from stable_baselines3 import PPO
-    import numpy as np
-    from stable_baselines3.common.utils import obs_as_tensor
-    import torch
-
-    model = PPO.load(model_path)
-
-    def encode(tx_id, phi):
-        candidates = list(phi.items())[:N_MAX]
-        candidate_ids = [cid for cid, _ in candidates]
-        feat = np.zeros((N_MAX, 6), dtype=np.float32)
-        tx_x, tx_y = traci.vehicle.getPosition(tx_id)
-        tx_v = traci.vehicle.getSpeed(tx_id)
-        for i, (cid, state) in enumerate(candidates):
-            ox, oy = state["pos"]
-            feat[i, 0] = ox - tx_x
-            feat[i, 1] = oy - tx_y
-            feat[i, 2] = state["speed"] - tx_v
-            feat[i, 5] = 1.0
-        own_speed = traci.vehicle.getSpeed(tx_id)
-        own_angle = np.radians(traci.vehicle.getAngle(tx_id))
-        own = np.array([own_speed, np.sin(own_angle), np.cos(own_angle)], dtype=np.float32)
-        return np.concatenate([feat.flatten(), own]), candidate_ids
-
-    def fn(env):
-        obs = env.get_observations()
-        actions = {}
-        for tx_id, phi in obs.items():
-            if not phi:
-                continue
-            obs_vec, cand_ids = encode(tx_id, phi)
-            action, _ = model.predict(obs_vec, deterministic=True)
-            n = len(cand_ids)
-            scores = action[:n]
-            k = min(env.broadcast_k, n)
-            top_idx = np.argsort(scores)[-k:]
-            actions[tx_id] = [cand_ids[j] for j in top_idx]
-        return actions
-
-    return fn
+N_MAX = 20
 
 
 results = []
